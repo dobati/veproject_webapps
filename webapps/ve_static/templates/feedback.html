@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block title %}Vé How good are you?{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+	<div class="outer">
+		<div class="inner">
+			<section class="trans-intro">
+				<div class="row">
+					<div class="col-md-12">
+						<p>
+							{{ chosen_topic  }}
+						</p>
+						<p>
+							Try to translate this sentence to Spanish:
+						</p>
+						<p id="sent">
+							{% csrf_token %} {{ random_sent }}
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="translate">
+				<div class="row">
+					<div class="col-md-12">
+						<form name="form" method="post" action="" autocomplete="off">
+							<p>
+								{% csrf_token %} {{ form.as_p }}	
+							</p>
+							<p class="hid">
+								<span id="help">
+									{% csrf_token %} {{ js_data }}
+								</span>
+							</p>
+					</div>
+					<div class="col-md-9">
+						<div id="input">
+							<input disabled type="submit" class="btn btn-default" value="See solution"/>
+							<input disabled type="button" class="btn btn-default" value="Help!" onclick="helpwords()" />
+							<input disabled id="mySubmit" type="submit" class="btn btn-info" value="Send"/>
+						</div>
+					</div>
+						</form>
+				</div>
+			</section>
+		</div>
+		<section class="feedback">
+			<div class="row">
+				<div class="col-md-4">
+					<form action="" method="post">
+						<div class="box-trans">
+							<p class="tit">
+								{{ your_translation }}
+							</p>
+							<p>
+								<!--{{ user_trans }}-->
+								{{ user_translation | safe }}
+							</p>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-4">
+					<div class="box-trans">
+						<p class="tit">
+							{{ reference_translation }}
+						</p>
+						<p>
+							{% csrf_token %}{{ t }}
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="box-trans">
+						<p class="tit">
+							{{ machine_translation }}
+						</p>
+						<p>
+							{% csrf_token %}{{ machine_t }}
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<p class="eval">
+						{% csrf_token %}{{ feedback_user }}
+					</p>
+				</div>
+				<div class="col-md-6">
+					<p class="eval">
+						{% csrf_token %}{{ compare_to_mt }}
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<form>
+						<input type="submit" class="btn btn-info btn-lg" value="Next"/>
+					</form>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+{% endblock content %}

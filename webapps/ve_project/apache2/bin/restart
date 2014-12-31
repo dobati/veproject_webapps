@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/home/dobati/webapps/ve_project/apache2/bin/stop
+sleep 5
+/home/dobati/webapps/ve_project/apache2/bin/start

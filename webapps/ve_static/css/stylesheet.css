@@ -1,0 +1,332 @@
+/*
+---------------------
+    Common styles
+---------------------
+*/
+
+html,
+body {
+  height: 100%;
+}
+body {
+  font: 20px 'Linux Libertine';
+  color: #4a4a4a;
+  line-height: 29px;
+  font-weight: 300;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Roboto, sans-serif;
+  color: #000;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 120%;
+}
+h2 {
+    font-size:36px;
+}
+h3 {
+  font-size: 30px;
+}
+h4 {
+  font-size: 24px;
+}
+h5 {
+  font-size: 18px;
+}
+a {
+  color: #4a4a4a;
+  text-decoration: underline;
+}
+a:hover {
+  color: #4a4a4a;
+  text-decoration: none;
+}
+
+/*
+------------------
+    Navigation bar
+------------------
+*/
+
+nav {
+    margin: 50px 20px 0px;
+}
+nav .logo {
+    float: left;
+}
+.logo a {
+    color:#AD3333;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 80px;
+}
+nav div a:hover {
+    color: #AD3333;
+}
+nav ul {
+    float: right;
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-right: 0;
+}
+nav ul li {
+    float: left;
+    margin-left: 60px;
+    line-height: 68px;
+}
+nav ul li a {
+    color: #AD3333;
+    font-family: Roboto;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+nav ul li a:hover {
+    color: #AD3333;
+}
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+/* 
+------------------------
+    Intro
+------------------------
+*/
+
+#intro {
+    padding: 10px 0px 0px;
+}
+#intro h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#intro .row {
+    margin-bottom: 20px;
+}
+
+/* 
+------------------------
+    Spanish learning
+------------------------
+*/
+#spanish h2 {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.box {
+    width: 200px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.genre {
+    font-size: 22px;
+    text-align: center;
+    font-family: Roboto;
+    margin: 10px 0px;
+}
+#movies {
+    background: #F1C972;
+}
+#books {
+    background: #F5886B;
+}
+#legal {
+    background: #72AE95;
+}
+#general {
+    background: #E68080;
+}
+.inside-box {
+    margin-top: 15px;
+    text-align: center;
+    width: 100%;
+}
+#gen {
+    font-size: 19px;
+}
+.circle {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    text-align: center;
+    display: table-cell;
+    background-color: #FFD1B3;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: bold;
+}
+.box a {
+    text-decoration: none;
+    display: inline-block;
+}
+/*
+--------------
+    Translate
+--------------
+*/
+.outer {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+.inner {
+    width: 75%;
+    display: inline-block;
+    text-align: center;
+}
+.trans-intro {
+    text-align: left;
+    margin-top: 50px;
+}
+#sent {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px 0px 15px;
+}
+#input {
+  float: right;
+  margin: 15px 0px 50px;
+}
+.hid {
+  display: none;
+  margin: 0px;
+}
+.feedback p{
+  text-align: center;
+  margin: 0px 10% 10px;
+}
+p.tit {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+highlight {
+  -moz-text-decoration-line: underline;
+  -moz-text-decoration-style: wavy;
+  -moz-text-decoration-color: red;
+  margin-bottom: 0px;
+  
+}
+.box-trans {
+    width:90%;
+    background: WhiteSmoke;
+    display: inline-block;
+    /*text-align: center;*/
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.btn-info {
+    background: #72AE95;
+    border: #72AE95;
+}
+.btn-info:hover {
+  background: #72AE95;
+  border: #72AE95;
+}
+p.eval {
+  font-weight: bold;
+  margin: 20px 0px 25px;
+}
+
+/*
+--------------
+    About Ve
+--------------
+*/
+section #about_ve {
+    width: 90%;
+    display: inline;
+    text-align: center;
+}
+#about_ve h2 {
+    margin: 30px 0px;
+}
+#about_ve p {
+    text-align: justify;
+}
+#about_ve p:first-of-type {
+    margin-bottom: 15px;
+}
+#about_ve h4 {
+  text-align: left;
+  margin: 35px 0 25px;
+}
+#footnote {
+  margin-top: 50px;
+}
+/*
+--------------
+    About us
+--------------
+*/
+section #about_us {
+  width: 90%;
+  display: inline;
+  text-align: center;
+}
+#about_us h2 {
+    margin: 30px 0px;
+}
+#about_us p {
+    text-align: justify;
+}
+#name {
+  margin-top: 40px;
+}
+#name p{
+    text-align: center;
+    font-size: 18px;
+}
+
+/*
+--------------
+    Footer
+--------------
+*/
+
+.page-wrap {
+    min-height: 100%;
+    margin-bottom: -100px;
+}
+.page-wrap:after {
+    content: "";
+    display: block;
+}
+footer,
+.page-wrap:after {
+    height: 120px;
+}
+footer {
+    background: WhiteSmoke;
+    padding: 45px 0 0 0;
+    margin-top: 90px;
+}
+footer .row {
+    margin: 0;
+}
+footer a {
+    color:#AD3333;
+    text-decoration: none;
+}
+footer a:hover {
+    color:#AD3333;
+}
+#copyright {
+    font-size: 14px;
+    font-family: Roboto;
+    text-align: center;
+}
+#contact {
+    font-size: 18px;
+    font-family: Roboto;
+    text-align: center;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+        <title>
+            {% block title %}Vé{% endblock %}
+        </title>
+
+		<!-- retrieve the javascript source for jquery -->
+		<script src="{% static 'js/jquery-1.11.1.min.js' %}" ></script>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"></link>
+        <link href="//brick.a.ssl.fastly.net/Linux+Libertine:400,600,700,400i,600i,700i/Roboto:300,400,300i,400i" rel="stylesheet"></link>
+        <link type="text/css" rel="stylesheet" href="{% static 'css/stylesheet.css' %}"></link>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<!-- link to the css for the messi library (jquery needed) for the nice window with suggestions for the translation -->
+		<link rel="stylesheet" href= "{% static 'css/messi.min.css' %}" />
+
+		<!-- javascript (messi library) to have a nice looking pop up window with suggestions for the translation -->
+		<script src="{% static 'js/messi.min.js' %}" ></script>
+
+		<script src="{% static 'js/ve.js' %}"></script>
+
+    </head>
+    
+    <body>
+        <div class="page-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav class="clearfix" role="navigation">
+                            <div class="col-md-6">
+                                <div class="logo">
+                                    <a href="/">
+                                            Vé
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>
+                                        <a href='{% url "about_ve" %}'>
+                                            About Vé
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href='{% url "about_us" %}'>
+                                            About us
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+				{% block content %}
+                {% endblock %}
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <p id="copyright">
+                            © Letr 2014
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <p id="contact">
+                            <a href="mailto:velanguagelearning@gmail.com">
+                                Contact us
+                            </a>
+                        </p>
+                    </div>
+                </div>  
+            </div>
+        </footer>
+    </body>
+</html>

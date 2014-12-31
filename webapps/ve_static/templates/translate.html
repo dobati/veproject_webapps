@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Vé Let's translate!{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+	<div class="outer">
+		<div class="inner">
+			<section class="trans-intro">
+				<div class="row">
+					<div class="col-md-12">
+						<p>
+							{{ chosen_topic  }}
+						</p>
+						<p>
+							Try to translate this sentence to Spanish:
+						</p>
+						<p id="sent">
+							{% csrf_token %} {{ r }}
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="translate">
+				<div class="row">
+					<div class="col-md-12">
+						<form name="form" method="post" action="" autocomplete="off">
+							<!-- Text box for user input -->
+							<p>
+								{% csrf_token %} {{ form.as_p }}	
+							</p>
+							<!-- HELP pop up window data unelegantly currently saved here to enable rendering -->
+							<p class="hid">
+								<span id="help">
+									{% csrf_token %} {{ js_data }}
+								</span>
+							</p>
+					</div>
+					<div class="col-md-9">
+						<div id="input">
+							<input type="submit" class="btn btn-default" value="See solution"/>
+							<input type="button" class="btn btn-default" value="Help!" onclick="helpwords()" />									
+							<input type="submit" class="btn btn-info" value="Send"/>
+						</div>
+					</div>
+						</form>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+{% endblock content %}

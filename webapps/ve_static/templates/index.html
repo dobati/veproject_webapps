@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block title %}Vé Learning Spanish{% endblock %}
+
+{% block content %}
+<div class="container">
+    <section id="intro">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>
+                    Learning by Translating
+                </h2>
+                <p>
+                    Vé is an alternative to learn Spanish by translating. Simply choose your field of interest, your level and begin Learning by Translating.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="spanish">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>
+                    Learn Spanish
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="box" id="movies">
+                    <p class="genre">
+                        Movies
+                    </p>
+                    <div class="inside-box">
+                        <a href='{% url "movies1" %}'>
+                            <div class="circle">
+                                    1
+                            </div>
+                        </a>
+                        <a href='{% url "movies2" %}'>
+                            <div class="circle">
+                                    2
+                            </div>
+                        </a>
+                        <a href='{% url "movies3" %}'>
+                            <div class="circle">
+                                    3
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="box" id="books">
+                    <p class="genre">
+                        Books
+                    </p>
+                    <div class="inside-box">
+                        <a href='{% url "books1" %}'>
+                            <div class="circle">
+                                    1
+                            </div>
+                        </a>
+                        <a href='{% url "books2" %}'>
+                            <div class="circle">
+                                    2
+                            </div>
+                        </a>
+                        <a href='{% url "books3" %}'>
+                            <div class="circle">
+                                    3
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="box" id="legal">
+                    <p class="genre">
+                        Legal texts
+                    </p>
+                    <div class="inside-box">
+                        <a href='{% url "legaltexts1" %}'>
+                            <div class="circle">
+                                    1
+                            </div>
+                        </a>
+                        <a href='{% url "legaltexts2" %}'>
+                            <div class="circle">
+                                    2
+                            </div>
+                        </a>
+                        <a href='{% url "legaltexts3" %}'>
+                            <div class="circle">
+                                    3
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="box" id="general">
+                    <p class="genre" id="gen">
+                        General conversations
+                    </p>
+                    <div class="inside-box" id="gen">
+                        <a href='{% url "general1" %}'>
+                            <div class="circle">
+                                    1
+                            </div>
+                        </a>
+                        <a href='{% url "general2" %}'>
+                            <div class="circle">
+                                    2
+                            </div>
+                        </a>
+                        <a href='{% url "general3" %}'>
+                            <div class="circle">
+                                    3
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock content %}
